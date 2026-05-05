@@ -6,6 +6,9 @@ This project is intentionally built as a lightweight HTML + FastAPI lab so it ca
 
 > Educational use only. Do not deploy this lab to a public server.
 
+# Sample Lab Web Page
+https://crazywifi.github.io/LLM_Vulnerable_lab/llm_vuln_lab_UI.html
+
 ## Important Model Selection Note
 
 Not every LLM will behave the same way in this lab. Strongly aligned commercial models, such as GPT, Claude, Gemini, or other heavily guarded models, may refuse many attack prompts even when the lab is running in `Vulnerable` mode. This does not mean the lab is broken. It means the selected model has its own built-in safety guardrails that may block the demonstration before the lab prompt can show the vulnerable behavior.
