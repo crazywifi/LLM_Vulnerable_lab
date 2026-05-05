@@ -6,6 +6,31 @@ This project is intentionally built as a lightweight HTML + FastAPI lab so it ca
 
 > Educational use only. Do not deploy this lab to a public server.
 
+## Important Model Selection Note
+
+Not every LLM will behave the same way in this lab. Strongly aligned commercial models, such as GPT, Claude, Gemini, or other heavily guarded models, may refuse many attack prompts even when the lab is running in `Vulnerable` mode. This does not mean the lab is broken. It means the selected model has its own built-in safety guardrails that may block the demonstration before the lab prompt can show the vulnerable behavior.
+
+For the clearest classroom demonstrations, use a local or research model that is less aggressively guarded. Examples that are often useful for red-team training, when available through LM Studio, Ollama, OpenRouter, or similar providers, include:
+
+- `meta-llama-3.1-8b-instruct-abliterated`
+- `cognitivecomputations/dolphin-mistral-24b-venice-edition`
+- `dolphin-llama3`
+- `dolphin-mixtral`
+- `nous-hermes`
+- Other local "abliterated", "uncensored", or security-research-oriented instruct models
+
+Model availability changes across providers, and names may differ depending on where you run them. Always choose models responsibly and only for authorized security education.
+
+Also note that prompt payloads are not guaranteed to work every time. A payload that succeeded earlier may fail later because:
+
+- LLM outputs are probabilistic and can vary between runs.
+- The model may become more cautious after earlier messages in the same chat.
+- Conversation history can change how the model interprets the next prompt.
+- Provider-side safety filters or model versions may change over time.
+- Temperature, context length, and system prompt ordering can affect behavior.
+
+If a payload stops working, first click `Clear Chat` and try again from a fresh conversation. This resets the local conversation history and often makes demonstrations more consistent.
+
 ## What This Lab Teaches
 
 This lab helps learners understand:
